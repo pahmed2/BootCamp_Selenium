@@ -1,4 +1,4 @@
-# Team 2 Project Requirements and Design
+# Team 2 - Web Automation [![Build Status](https://travis-ci.org/mhasan90/Team2WebAutomation.svg?branch=master)](https://travis-ci.org/mhasan90/Team2WebAutomation)
 
 ## Technical Requirements
 
