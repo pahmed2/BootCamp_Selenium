@@ -3,7 +3,7 @@ os: osx
 install: true
 script:
   - ./mvn clean validate
-  - bash <(curl -s https://codecov.io/bash)
+
 cache:
   directories:
   - $HOME/.m2
