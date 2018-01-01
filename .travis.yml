@@ -1,10 +1,9 @@
 language: java
-jdk: oraclejdk8
 os: osx
 install: true
+script:
+  - ./mvnw clean
+  - bash <(curl -s https://codecov.io/bash)
 cache:
   directories:
   - $HOME/.m2
-script:
-  - ./mvn clean install
-  - bash <(curl -s https://codecov.io/bash)
