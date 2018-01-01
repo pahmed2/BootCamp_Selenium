@@ -2,7 +2,7 @@ language: java
 os: osx
 script:
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-  - mvn test -B
+  - mvn validate -B
 cache:
   directories:
   - $HOME/.m2
