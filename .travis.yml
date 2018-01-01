@@ -2,7 +2,8 @@ language: java
 os: osx
 install: true
 script:
-  - ./mvn clean validate
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+  - mvn test -B
 
 cache:
   directories:
