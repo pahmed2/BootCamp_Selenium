@@ -13,7 +13,8 @@
 
     <test name = "Amazon">
         <classes>
-            <class name="homepage.TestValidateHomePage"/>
+            <!--<class name="homepage.TestValidateHomePage"/>-->
+            <class name="customerpage.TestCreateAccountPage"/>
         </classes>
     </test>
 
