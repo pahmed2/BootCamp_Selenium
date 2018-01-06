@@ -11,6 +11,8 @@
     <modules>
         <module>Generic</module>
         <module>Demo</module>
+        <module>Amazon</module>
+        <module>Horizon</module>
     </modules>
 
     <dependencyManagement>
