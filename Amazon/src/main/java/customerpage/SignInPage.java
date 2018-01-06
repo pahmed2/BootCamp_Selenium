@@ -1,4 +1,7 @@
 package customerpage;
 
-public class SignInPage {
+import base.CommonAPI;
+
+public class SignInPage extends CommonAPI{
+
 }

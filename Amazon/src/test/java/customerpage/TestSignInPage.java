@@ -1,4 +1,5 @@
 package customerpage;
 
-public class TestSignInPage {
+public class TestSignInPage extends SignInPage{
+
 }
