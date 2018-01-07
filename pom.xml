@@ -13,6 +13,7 @@
         <module>Demo</module>
         <module>Amazon</module>
         <module>Horizon</module>
+        <module>MetLife</module>
     </modules>
 
     <dependencyManagement>
