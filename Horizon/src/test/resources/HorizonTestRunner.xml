@@ -5,7 +5,7 @@
 
     <parameter name="useCloudEnv" value="false"/>
     <parameter name="cloudEnvName" value="browserstack"/>
-    <parameter name="os" value="Windows"/>
+    <parameter name="os" value="OS X"/>
     <parameter name="os_version" value="Sierra"/>
     <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="57.0"/>
