@@ -25,6 +25,21 @@
             <artifactId>testng</artifactId>
         </dependency>
         <dependency>
+<<<<<<< HEAD
+=======
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.api-client</groupId>
+            <artifactId>google-api-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+        </dependency>
+        <dependency>
+>>>>>>> 3bd712232e0da917f9de713e575f5e01d6f54973
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
         </dependency>
@@ -32,6 +47,14 @@
             <groupId>com.relevantcodes</groupId>
             <artifactId>extentreports</artifactId>
         </dependency>
+<<<<<<< HEAD
+=======
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+        </dependency>
+
+>>>>>>> 3bd712232e0da917f9de713e575f5e01d6f54973
     </dependencies>
 
 </project>

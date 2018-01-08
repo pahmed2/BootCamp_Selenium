@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Amazon Automation Test" parallel="false">
+<suite name="Horizon Automation Test" parallel="false">
 
     <parameter name="useCloudEnv" value="false"/>
     <parameter name="cloudEnvName" value="browserstack"/>
@@ -9,12 +9,12 @@
     <parameter name="os_version" value="Sierra"/>
     <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="57.0"/>
-    <parameter name="url" value="https://www.amazon.com"/>
+    <parameter name="url" value="http://www.horizonnjhealth.com/"
+    />
 
-    <test name = "Amazon">
+    <test name = "Horizon">
         <classes>
-            <class name="homepage.TestValidateHomePage"/>
-            <class name="customerpage.TestCreateAccountPage"/>
+            <class name="home.TestViewFields"/>
         </classes>
     </test>
 
