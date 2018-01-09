@@ -12,6 +12,7 @@
         <module>Generic</module>
         <module>Demo</module>
         <module>Amazon</module>
+        <module>Cnn</module>
         <module>Horizon</module>
         <module>MetLife</module>
     </modules>
