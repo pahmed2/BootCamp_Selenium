@@ -1,4 +1,4 @@
-package datasearch;
+package datasearchpage;
 
 import base.CommonAPI;
 import utility.DataReader;

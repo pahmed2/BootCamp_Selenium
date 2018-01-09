@@ -15,7 +15,7 @@
         <classes>
             <class name="homepage.TestValidateHomePage"/>
             <class name="customerpage.TestCreateAccountPage"/>
-            <class name="datasearch.TestItemSearchPage"/>
+            <class name="datasearchpage.TestItemSearchPage"/>
         </classes>
     </test>
 

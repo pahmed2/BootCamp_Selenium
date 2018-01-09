@@ -1,4 +1,4 @@
-package datasearch;
+package datasearchpage;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
