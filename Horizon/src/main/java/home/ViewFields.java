@@ -1,8 +1,18 @@
 package home;
 
 import base.CommonAPI;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import java.util.List;
+import java.util.Set;
 
 public class ViewFields extends CommonAPI {
+    @FindBy(xpath = "//*[@id=\"ddSearchType\"]")
+    WebElement dropdownOptions;
+    @FindBy(xpath = "//*[@id=\"Physician-County\"]")
+    WebElement countyOptions;
 
     //TC-TS1-001
     public void geturl() {
@@ -59,4 +69,42 @@ public class ViewFields extends CommonAPI {
         clickByCss(".arrowTop");
     }
 
+    //TC-TS2-011: Verify Horizon page options
+    public void horizonpage() {
+        clickByXpath(".//*[@id='nav']/li[2]/a");
+    }
+
+    //TC-TS2-012:  View Provider Network page.
+    public void providerNetwork() {
+        clickByXpath(".//*[@id='nav']/li[2]/a");
+        clickByXpath("html/body/div[2]/div[1]/div[5]/ul/li[2]/a");
+    }
+
+    //TC-TS2-013 Verify image under Provider Network page
+    public void imageInProviderNetwork() {
+        clickByXpath(".//*[@id='nav']/li[2]/a");
+        clickByXpath("html/body/div[2]/div[1]/div[5]/ul/li[2]/a");
+        clickByCss("#font>a>img");
+    }
+
+    //TC-TS2-014 Search the Provider Directory
+    public void searchProviderDirectory() {
+        clickByXpath(".//*[@id='nav']/li[2]/a");
+        clickByXpath("html/body/div[2]/div[1]/div[5]/ul/li[2]/a");
+        clickByXpath(".//*[@id='font']/ul/li/a/span");
+    }
+
+    //TC_TS2_015: Verify System displays Provider Location
+    public void providerLocation() {
+        searchProviderDirectory();
+        for (String winHandle : driver.getWindowHandles()) {
+            driver.switchTo().window(winHandle);
+        }
+        PageFactory.initElements(driver, this);
+        clickByXpath("//*[@id=\"ddSearchType\"]");
+        selectOptionByVisibleText(dropdownOptions, "Physicians");
+        clickByXpath("//*[@id=\"PlanType\"]/option[2]");
+        typeByXpath("//*[@id=\"Physician-txtZip\"]", "07801");
+        selectOptionByVisibleText(countyOptions, "Morris, NJ");
+    }
 }
