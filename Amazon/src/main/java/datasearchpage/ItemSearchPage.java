@@ -37,12 +37,12 @@ public class ItemSearchPage extends CommonAPI {
         String[] assertItems = getAssretData(fileName);
         String[] actual = new String[items.length];
         for (int i=0; i<items.length; i++){
-            sleepFor(1);
+            sleepFor(3);
             typeByIdNEnter("twotabsearchtextbox", items[i]);
-            sleepFor(1);
+            sleepFor(3);
             actual[i] = getTextByXpath("//*[text()='"+assertItems[i]+"']");
             clearInputFieldById("twotabsearchtextbox");
-            sleepFor(1);
+            sleepFor(3);
         }
         return actual;
     }
