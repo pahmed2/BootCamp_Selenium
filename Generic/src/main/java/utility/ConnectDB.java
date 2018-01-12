@@ -14,20 +14,20 @@ import java.util.Properties;
 
 public class ConnectDB {
     public static MongoDatabase mongoDatabase = null;
-    Connection connect = null;
-    Statement statement = null;
-    PreparedStatement ps = null;
-    private ResultSet resultSet = null;
+    public static Connection connect = null;
+    public static Statement statement = null;
+    public static PreparedStatement ps = null;
+    public static ResultSet resultSet = null;
     List<String> list = new ArrayList<String>();
 
     public static Properties loadProperties() throws IOException{
         Properties prop = new Properties();
-        InputStream ism = new FileInputStream("src/MySql.properties");
+        InputStream ism = new FileInputStream("../Generic/src/main/resources/MySql.properties");
         prop.load(ism);
         ism.close();
         return prop;
     }
-    public void connectToDatabase() throws IOException, SQLException, ClassNotFoundException {
+    public static Connection connectToMySql() throws IOException, SQLException, ClassNotFoundException {
         Properties prop = loadProperties();
         String driverClass = prop.getProperty("MYSQLJDBC.driver");
         String url = prop.getProperty("MYSQLJDBC.url");
@@ -35,7 +35,8 @@ public class ConnectDB {
         String password = prop.getProperty("MYSQLJDBC.password");
         Class.forName(driverClass);
         connect = DriverManager.getConnection(url,userName,password);
-        //  System.out.println("Database is connected");
+        System.out.println("Database is connected");
+        return connect;
     }
     public static MongoDatabase connectMongoDB() {
         String host = "localhost";
@@ -49,7 +50,7 @@ public class ConnectDB {
     public List<String> readDataBase(String tableName, String columnName)throws Exception{
         List<String> data = new ArrayList<String>();
         try {
-            connectToDatabase();
+            connectToMySql();
             statement = connect.createStatement();
             resultSet = statement.executeQuery("select * from " + tableName);
             data = getResultSetData(resultSet, columnName);
@@ -63,7 +64,7 @@ public class ConnectDB {
     public List<String> readDataBase() throws Exception {
         try {
 
-            connectToDatabase();
+            connectToMySql();
             // Statements allow to issue SQL queries to the database
             statement = connect.createStatement();
             // Result set get the result of the SQL query
@@ -116,7 +117,7 @@ public class ConnectDB {
     //  public void InsertDataFromArryToMySql()
     {
         try {
-            connectToDatabase();
+            connectToMySql();
 
             //  connect.createStatement("INSERT into tbl_insertionSort set SortingNumbers=1000");
 
@@ -143,7 +144,7 @@ public class ConnectDB {
     //  public void InsertDataFromArryToMySql()
     {
         try {
-            connectToDatabase();
+            connectToMySql();
             //  connect.createStatement("INSERT into tbl_insertionSort set SortingNumbers=1000");
             ps = connect.prepareStatement("INSERT INTO "+tableName+" ( "+columnName+" ) VALUES(?)");
             ps.setString(1,ArrayData);
@@ -161,7 +162,7 @@ public class ConnectDB {
     public List<String> directDatabaseQueryExecute(String passQuery,String dataColumn)throws Exception{
         List<String> data = new ArrayList<String>();
         try {
-            connectToDatabase();
+            connectToMySql();
             statement = connect.createStatement();
             resultSet = statement.executeQuery(passQuery);
             data = getResultSetData(resultSet, dataColumn);
@@ -178,7 +179,7 @@ public class ConnectDB {
     //  public void InsertDataFromArryToMySql()
     {
         try {
-            connectToDatabase();
+            connectToMySql();
             //  connect.createStatement("INSERT into tbl_insertionSort set SortingNumbers=1000");
             for(Object st:list){
                 // System.out.println(st);

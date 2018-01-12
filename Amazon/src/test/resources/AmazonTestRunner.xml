@@ -17,6 +17,7 @@
             <class name="customerpage.TestCreateAccountPage"/>
             <class name="datasearchpage.TestItemSearchPage"/>
             <class name="googlesheetspage.TestGoogleSheetsPage"/>
+            <class name="mysqldatapage.TestMySqlJdbcPage"/>
         </classes>
     </test>
 
