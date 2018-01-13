@@ -69,11 +69,11 @@
     + Test cases: includes page object model, page factory.
     + Data driven: reads testdata from xls files, google sheets, mysql tables. 
 - `/AmazonExtent-Report`
-    + generates extent report in html format.
+    + Generates extent report in html format.
 - `/Cnn`
     + Test cases: includes page object model.
 - `/CnnExtent-Report`
-    + generates extent report in html format.
+    + Generates extent report in html format.
 - `/Demo`
     + Demo is a maven module created for demonstration purposes. 
     + In maven, modules are sub-projects.
@@ -112,3 +112,5 @@
     - [https://seleniumhq.github.io/selenium/docs/api/java/](https://seleniumhq.github.io/selenium/docs/api/java/)
 * TestNG API
     - [https://jitpack.io/com/github/cbeust/testng/master/javadoc/](https://jitpack.io/com/github/cbeust/testng/master/javadoc/)
+* Java Quickstart for Google Sheets
+    - [https://developers.google.com/sheets/api/quickstart/java](https://developers.google.com/sheets/api/quickstart/java)
