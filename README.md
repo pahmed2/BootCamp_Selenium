@@ -3,7 +3,7 @@
 ## Technical Requirements
 
 - Must have:
-    + Operating system: Mac or Windows
+    + Operating system: Mac / Windows
     + Software platform: Java
         * JDK
     + Java IDE: IntelliJ IDEA
@@ -12,6 +12,9 @@
     + Build tool: Maven
     + Software-testing framework: Selenium
     + Testing framework: TestNG
+    + Automation server: Jenkins
+    + Cloud testing platform: BrowserStack / Sauce Labs
+    + Database: MySQL / MongoDB
 
 ## Setup
 
@@ -27,16 +30,20 @@
     + In the Clone with HTTPs section, copy the clone URL for the repository.
     + Open Terminal and navigate to your workspace.
     + Type git clone, and then paste the URL you copied.
-    `git clone https://github.com/YOUR-USERNAME/Team2WebAutomation.git`
+    `git clone https://github.com/YOUR-USERNAME/Team2WebAutomation.git`. This will clone the master branch.
+        - To clone a specific github branch: 
+        `git clone -b your-branch git@github.com:user/myproject.git`
     + Press Enter. Your local clone will be created.
 
 - Switch to your branch
     + Switch over to the branch `"yourfirstname"` when you want to add new commits to it.
     + You can see all branches created by using:
-    `git branch`.
+    `git branch`. 
     The asterisk indicates the current active branch.
     + Use the checkout command to switch branch.
     `git checkout [name_of_your_branch]`
+        - To create a new branch, `git checkout -b [name_of_your_branch]`
+        - Save any unfinished work before checkout by a commit. Reset the head after you get back.
 - After you have done a lot of work on your branch
     + Stage the file(s) for commit to your local repository.
     `git add .`
@@ -58,14 +65,37 @@
 
 ## Explanations
 
+- `/Amazon`
+    + Test cases: includes page object model, page factory.
+    + Data driven: reads testdata from xls files, google sheets, mysql tables. 
+- `/AmazonExtent-Report`
+    + generates extent report in html format.
+- `/Cnn`
+    + Test cases: includes page object model.
+- `/CnnExtent-Report`
+    + generates extent report in html format.
 - `/Demo`
     + Demo is a maven module created for demonstration purposes. 
     + In maven, modules are sub-projects.
     + You will be using different Modules to maintain different web-domains.
+- `/DemoExtent-Report`
+    + Generates extent report in html format.
 - `/Generic`
     + Generic module is created to manage all the common settings for all the modules.
+- `/Horizon`
+    + Test cases: includes page object model, page factory.
+- `/HorizonExtent-Report`
+    + Generates extent report in html format.
+- `/MetLife`
+    + Test cases: includes page object model. 
+- `/MetLifeExtent-Report`
+    + Generates extent report in html format.
 - `.gitignore`
     + Git uses this file to determine which files and directories to ignore, before you make a commit.
+- `.travis.yml`
+    + To build and test the project online.
+- `README.md`
+    + To write all these information here.
 - `pom.xml`
     + A Project Object Model or POM is the fundamental unit of work in Maven. 
     + It is an XML file that contains information about the project and configuration details used by Maven to build the project.
