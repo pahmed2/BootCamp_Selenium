@@ -11,4 +11,8 @@ public class NavigateToPages extends CommonAPI {
     public void clickToGoSignIn(){
         clickByCss("#nav-signin-tooltip");
     }
+    // navigate to homepage
+    public void navigateToHomePage(){
+        driver.navigate().to("https://www.amazon.com/");
+    }
 }

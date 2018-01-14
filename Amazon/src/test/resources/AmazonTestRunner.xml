@@ -18,6 +18,8 @@
             <class name="datasearchpage.TestItemSearchPage"/>
             <class name="googlesheetspage.TestGoogleSheetsPage"/>
             <class name="mysqldatapage.TestMySqlJdbcPage"/>
+            <class name="searchpage.TestSearchPage"/>
+            <class name="keywordpage.TestFeatures"/>
         </classes>
     </test>
 
