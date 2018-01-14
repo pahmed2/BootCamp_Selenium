@@ -15,6 +15,7 @@
         <module>Cnn</module>
         <module>Horizon</module>
         <module>MetLife</module>
+        <module>W3Schools</module>
     </modules>
 
     <dependencyManagement>
