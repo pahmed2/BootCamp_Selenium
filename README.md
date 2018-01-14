@@ -90,6 +90,10 @@
     + Test cases: includes page object model. 
 - `/MetLifeExtent-Report`
     + Generates extent report in html format.
+- `/W3Schools`
+    + Test cases: includes page object model. 
+- `/W3SchoolsExtent-Report`
+    + Generates extent report in html format.
 - `.gitignore`
     + Git uses this file to determine which files and directories to ignore, before you make a commit.
 - `.travis.yml`
