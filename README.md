@@ -68,6 +68,7 @@
 - `/Amazon`
     + Test cases: includes page object model, page factory.
     + Data driven: reads testdata from xls files, google sheets, mysql tables. 
+    + Keyword driven: reads keyworks (feature names) from xls file. 
 - `/AmazonExtent-Report`
     + Generates extent report in html format.
 - `/Cnn`
