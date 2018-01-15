@@ -9,8 +9,7 @@
     <parameter name="os_version" value="Sierra"/>
     <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="57.0"/>
-    <parameter name="url" value="http://www.horizonnjhealth.com/"
-    />
+    <parameter name="url" value="http://www.horizonnjhealth.com"/>
 
     <test name = "Horizon">
         <classes>

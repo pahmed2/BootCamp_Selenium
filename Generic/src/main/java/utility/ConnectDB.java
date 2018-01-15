@@ -93,7 +93,6 @@ public class ConnectDB {
 
         }
     }
-
     private List<String> getResultSetData(ResultSet resultSet) throws SQLException {
         List<String> dataList = new ArrayList<String>();
         while(resultSet.next()){
@@ -111,24 +110,15 @@ public class ConnectDB {
         return dataList;
     }
     // function  for Data insert into MySQL Database
-    public void InsertDataFromArryToMySql(int [] ArrayData,String tableName, String columnName)
-    //InsertDataFromArryListToMySql
-
-    //  public void InsertDataFromArryToMySql()
-    {
+    public void InsertDataFromArryToMySql(int [] ArrayData,String tableName, String columnName) {
         try {
             connectToMySql();
-
-            //  connect.createStatement("INSERT into tbl_insertionSort set SortingNumbers=1000");
-
             for(int n=0; n<ArrayData.length; n++){
 
                 ps = connect.prepareStatement("INSERT INTO "+tableName+" ( "+columnName+" ) VALUES(?)");
                 ps.setInt(1,ArrayData[n]);
                 ps.executeUpdate();
-                //System.out.println(list[n]);
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         } catch (SQLException e) {
@@ -136,20 +126,15 @@ public class ConnectDB {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        //connection = ConnectionConfiguration.getConnection();
     }
-
     // Function for Insert Single value in a table
     public void InsertDataFromStringToMySql(String ArrayData,String tableName, String columnName)
-    //  public void InsertDataFromArryToMySql()
     {
         try {
             connectToMySql();
-            //  connect.createStatement("INSERT into tbl_insertionSort set SortingNumbers=1000");
             ps = connect.prepareStatement("INSERT INTO "+tableName+" ( "+columnName+" ) VALUES(?)");
             ps.setString(1,ArrayData);
             ps.executeUpdate();
-            //System.out.println(list[n]);
         } catch (IOException e) {
             e.printStackTrace();
         } catch (SQLException e) {
@@ -157,7 +142,6 @@ public class ConnectDB {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        //connection = ConnectionConfiguration.getConnection();
     }
     public List<String> directDatabaseQueryExecute(String passQuery,String dataColumn)throws Exception{
         List<String> data = new ArrayList<String>();
@@ -173,21 +157,14 @@ public class ConnectDB {
         }
         return data;
     }
-
     public void InsertDataFromArryListToMySql(List<Object> list,String tableName, String columnName)
-    //InsertDataFromArryListToMySql
-    //  public void InsertDataFromArryToMySql()
     {
         try {
             connectToMySql();
-            //  connect.createStatement("INSERT into tbl_insertionSort set SortingNumbers=1000");
             for(Object st:list){
-                // System.out.println(st);
-
                 ps = connect.prepareStatement("INSERT INTO "+tableName+" ( "+columnName+" ) VALUES(?)");
                 ps.setObject(1,st);
                 ps.executeUpdate();
-                //System.out.println(list[n]);
             }
 
         } catch (IOException e) {
@@ -197,7 +174,5 @@ public class ConnectDB {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        //connection = ConnectionConfiguration.getConnection();
     }
-
 }

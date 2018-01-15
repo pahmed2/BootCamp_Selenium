@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class TestFeatures extends Features{
     @Test
-    public void testFeatures()throws IOException {
+    public void testFeatures() throws IOException, InterruptedException {
         selectFeatures();
     }
 }

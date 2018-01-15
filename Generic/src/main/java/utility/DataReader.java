@@ -27,7 +27,6 @@ public class DataReader {
         numberOfRows = sheet.getLastRowNum();
         numberOfCol =  sheet.getRow(0).getLastCellNum();
         data = new String[numberOfRows+1][numberOfCol+1];
-
         for(int i=1; i<data.length; i++){
             HSSFRow rows = sheet.getRow(i);
             for(int j=0; j<numberOfCol; j++){
@@ -47,7 +46,6 @@ public class DataReader {
         numberOfRows = sheet.getLastRowNum();
         numberOfCol =  sheet.getRow(0).getLastCellNum();
         data = new String[numberOfRows+1];
-
         for(int i=1; i<data.length; i++){
             HSSFRow rows = sheet.getRow(i);
             for(int j=0; j<numberOfCol; j++){
@@ -58,7 +56,6 @@ public class DataReader {
         }
         return  data;
     }
-
     public String[] colReader(String path, int col)throws IOException{
         String []  data = {};
         File file = new File(path);
@@ -79,7 +76,6 @@ public class DataReader {
         }
         return  data;
     }
-
     public String getCellValue(HSSFCell cell){
         Object value = null;
 
@@ -96,9 +92,7 @@ public class DataReader {
                 break;
         }
         return value.toString();
-
     }
-
     public void writeBack(String value)throws IOException{
         wb = new HSSFWorkbook();
         sheet = wb.createSheet();

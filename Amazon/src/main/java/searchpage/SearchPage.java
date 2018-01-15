@@ -32,13 +32,16 @@ public class SearchPage extends CommonAPI {
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         getSearchInputWebElement().clear();
     }
-    public void searchItemsAndSubmitButton()throws IOException {
+    public void searchItemsAndSubmitButton() throws IOException, InterruptedException {
         TestLogger.log(getClass().getSimpleName() + ": " + (new Object(){}.getClass().getEnclosingMethod().getName()));
         ItemsToBeSearched itemsToBeSearched = new ItemsToBeSearched();
         String [] value = itemsToBeSearched.getDataFromExcelFile();
         for(int i=0; i<value.length; i++) {
+            sleepFor(1);
             searchFor(value[i]);
+            sleepFor(1);
             submitSearchButton();
+            sleepFor(1);
             clearInput();
         }
     }

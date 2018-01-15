@@ -9,8 +9,7 @@
     <parameter name="os_version" value="Sierra"/>
     <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="57.0"/>
-    <parameter name="url" value="https://www.w3schools.com/sql/sql_alter.asp"
-    />
+    <parameter name="url" value="https://www.w3schools.com/sql/sql_alter.asp"/>
 
     <test name = "W3Schools">
         <classes>

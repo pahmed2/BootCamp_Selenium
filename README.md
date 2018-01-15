@@ -30,9 +30,9 @@
     + In the Clone with HTTPs section, copy the clone URL for the repository.
     + Open Terminal and navigate to your workspace.
     + Type git clone, and then paste the URL you copied.
-    `git clone https://github.com/YOUR-USERNAME/Team2WebAutomation.git`. This will clone the master branch.
+    `git clone https://github.com/your-username/project-name.git`. This will clone the master branch.
         - To clone a specific github branch: 
-        `git clone -b your-branch git@github.com:user/myproject.git`
+        `git clone -b your-branch git@github.com:user/project-name.git`
     + Press Enter. Your local clone will be created.
 
 - Switch to your branch
@@ -68,32 +68,21 @@
 - `/Amazon`
     + Test cases: includes page object model, page factory.
     + Data driven: reads testdata from xls files, google sheets, mysql tables. 
-- `/AmazonExtent-Report`
-    + Generates extent report in html format.
+    + Keyword driven: reads keyworks (feature names) from xls file. 
 - `/Cnn`
     + Test cases: includes page object model.
-- `/CnnExtent-Report`
-    + Generates extent report in html format.
 - `/Demo`
     + Demo is a maven module created for demonstration purposes. 
     + In maven, modules are sub-projects.
     + You will be using different Modules to maintain different web-domains.
-- `/DemoExtent-Report`
-    + Generates extent report in html format.
 - `/Generic`
     + Generic module is created to manage all the common settings for all the modules.
 - `/Horizon`
     + Test cases: includes page object model, page factory.
-- `/HorizonExtent-Report`
-    + Generates extent report in html format.
 - `/MetLife`
     + Test cases: includes page object model. 
-- `/MetLifeExtent-Report`
-    + Generates extent report in html format.
 - `/W3Schools`
     + Test cases: includes page object model. 
-- `/W3SchoolsExtent-Report`
-    + Generates extent report in html format.
 - `.gitignore`
     + Git uses this file to determine which files and directories to ignore, before you make a commit.
 - `.travis.yml`
