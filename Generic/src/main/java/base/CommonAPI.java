@@ -94,6 +94,7 @@ public class CommonAPI {
     private String browserstack_username = "username";
     private String saucelabs_accesskey = "ssh_key";
     private String browserstack_accesskey = "ssh_key";
+    private String getOsNameFromSystem = System.getProperty("os.name");
 
     @Parameters({"useCloudEnv","cloudEnvName","os","os_version","browserName","browserVersion","url"})
     @BeforeMethod
@@ -116,16 +117,16 @@ public class CommonAPI {
     }
     public WebDriver getLocalDriver(@Optional("mac") String OS, String browserName){
         if(browserName.equalsIgnoreCase("chrome")){
-            if(OS.equalsIgnoreCase("OS X")){
+            if(getOsNameFromSystem.contains("Mac")){
                 System.setProperty("webdriver.chrome.driver", "../Generic/driver/chromedriver");
-            }else if(OS.equalsIgnoreCase("Windows")){
+            }else if(getOsNameFromSystem.contains("Windows")){
                 System.setProperty("webdriver.chrome.driver", "../Generic/driver/chromedriver.exe");
             }
             driver = new ChromeDriver();
         }else if(browserName.equalsIgnoreCase("firefox")){
-            if(OS.equalsIgnoreCase("OS X")){
+            if(getOsNameFromSystem.contains("Mac")){
                 System.setProperty("webdriver.gecko.driver", "../Generic/driver/geckodriver");
-            }else if(OS.equalsIgnoreCase("Windows")) {
+            }else if(getOsNameFromSystem.contains("Windows")) {
                 System.setProperty("webdriver.gecko.driver", "../Generic/driver/geckodriver.exe");
             }
             driver = new FirefoxDriver();
