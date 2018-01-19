@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Demo Automation Test" parallel="false">
+<suite name="CNN Automation Test" parallel="false">
 
     <parameter name="useCloudEnv" value="false"/>
     <parameter name="cloudEnvName" value="browserstack"/>
@@ -11,7 +11,7 @@
     <parameter name="browserVersion" value="57.0"/>
     <parameter name="url" value="https://www.cnn.com"/>
 
-    <test name = "Demo">
+    <test name = "CNN">
         <classes>
             <class name="testcases.TestHomePage"/>
         </classes>

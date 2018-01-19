@@ -14,7 +14,7 @@ public class TestHomePage extends HomePage {
         System.out.println("Test Case 1 Passed");
     }
 
-    // CNN_TS1_TC2: CNN LOGO LINK IS VISIBLE
+    // CNN_TS1_TC2: CNN logo link is visible
     @Test(enabled = true)
     public void cnnTS1TC02() throws InterruptedException {
         String actual = cnnLogo();

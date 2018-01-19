@@ -12,7 +12,7 @@ public class HomePage extends CommonAPI {
         return url;
     }
 
-    // CNN_TS1_TC2: CNN LOGO LINK IS VISIBLE
+    // CNN_TS1_TC2: CNN logo link is visible
     public String cnnLogo() throws InterruptedException {
         sleepFor(1);
         clickByXpath("//a[@id='logo']");
