@@ -10,6 +10,9 @@
 *.iml
 *.iws
 
+### Google Sheets API
+*.credentials/
+
 ### Mac
 .DS_Store
 
