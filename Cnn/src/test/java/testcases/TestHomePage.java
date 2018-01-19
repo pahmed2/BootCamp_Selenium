@@ -16,7 +16,7 @@ public class TestHomePage extends HomePage {
 
     // CNN_TS1_TC2: CNN LOGO LINK IS VISIBLE
     @Test(enabled = true)
-    public void cnnTS1TC02() {
+    public void cnnTS1TC02() throws InterruptedException {
         String actual = cnnLogo();
         String expected = "cnn.com";
         Assert.assertTrue(actual.contains(expected));

@@ -13,8 +13,10 @@ public class HomePage extends CommonAPI {
     }
 
     // CNN_TS1_TC2: CNN LOGO LINK IS VISIBLE
-    public String cnnLogo() {
-        WebElement logo1 = driver.findElement(By.xpath("/html/body/div[5]/div[2]/div[2]/a[1]"));
+    public String cnnLogo() throws InterruptedException {
+        sleepFor(1);
+        clickByXpath("//a[@id='logo']");
+        sleepFor(1);
         String status = getCurrentPageUrl();
         return status;
     }
@@ -28,6 +30,7 @@ public class HomePage extends CommonAPI {
 
     //CNN_TS1_TC4: US button is clickable
     public String isUSClickable() throws InterruptedException {
+        sleepFor(1);
         clickByCss("#nav > div.nav__container > div.nav-menu-links > a:nth-child(1)");
         sleepFor(1);
         String result = getCurrentPageTitle();
@@ -88,5 +91,4 @@ public class HomePage extends CommonAPI {
         String result = getCurrentPageTitle();
         return result;
     }
-
 }
