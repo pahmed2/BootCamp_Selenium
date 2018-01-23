@@ -81,6 +81,8 @@
     + Test cases: includes page object model, page factory.
 - `/MetLife`
     + Test cases: includes page object model. 
+- `/RestApi`
+    + Test cases: includes REST API testing (status code).
 - `/W3Schools`
     + Test cases: includes page object model. 
 - `.gitignore`
@@ -107,3 +109,5 @@
     - [https://jitpack.io/com/github/cbeust/testng/master/javadoc/](https://jitpack.io/com/github/cbeust/testng/master/javadoc/)
 * Java Quickstart for Google Sheets
     - [https://developers.google.com/sheets/api/quickstart/java](https://developers.google.com/sheets/api/quickstart/java)
+* Rest Assured - Getting Started
+    - [https://github.com/rest-assured/rest-assured/wiki/GettingStarted](https://github.com/rest-assured/rest-assured/wiki/GettingStarted)

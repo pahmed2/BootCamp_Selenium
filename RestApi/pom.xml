@@ -17,6 +17,10 @@
             <artifactId>Generic</artifactId>
             <version>1.0</version>
         </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
