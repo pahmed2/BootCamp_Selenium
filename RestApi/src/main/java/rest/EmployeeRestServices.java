@@ -7,7 +7,6 @@ import java.util.List;
 
 public class EmployeeRestServices extends CommonAPI{
     public static String apiHome = "http://info.venturepulse.org:8080/service-webapp/api/";
-
     // get all the valid uri
     public List<String> getValidUriList(){
         List<String> uriList = new ArrayList<>();
@@ -27,5 +26,4 @@ public class EmployeeRestServices extends CommonAPI{
         }
         return uriList;
     }
-
 }

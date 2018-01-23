@@ -9,7 +9,7 @@ import java.util.List;
 import static io.restassured.RestAssured.given;
 
 public class TestEmployeeRestServices extends EmployeeRestServices{
-    // Testing the Status Code
+    // Testing the Status Code 200 ok
     @Test (groups = "apiTest", priority = 1)
     public static void givenURIExists_whenResponseReceived(){
         Response response = given().when().get(apiHome + "AllEmployeeResources").
@@ -20,7 +20,7 @@ public class TestEmployeeRestServices extends EmployeeRestServices{
         System.out.println(status);
         System.out.println("TC1 Passed");
     }
-    // Testing the Status Code
+    // Testing the Status Code 404 not found
     @Test (groups = "apiTest", priority = 2)
     public void givenURIDoesNotExist_whenResponseReceived() throws IOException {
         String randomUri = RandomStringUtils.randomAlphabetic( 12 );
