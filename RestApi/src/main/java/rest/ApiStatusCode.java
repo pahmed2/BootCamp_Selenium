@@ -5,7 +5,7 @@ import org.apache.commons.lang3.RandomStringUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EmployeeRestServices extends CommonAPI{
+public class ApiStatusCode extends CommonAPI{
     public static String apiHome = "http://info.venturepulse.org:8080/service-webapp/api/";
     // get all the valid uri
     public List<String> getValidUriList(){
