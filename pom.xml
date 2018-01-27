@@ -4,17 +4,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.team2</groupId>
-    <artifactId>Team2WebAutomation</artifactId>
+    <groupId>com.team4</groupId>
+    <artifactId>Team4WebAutomation</artifactId>
     <packaging>pom</packaging>
     <version>1.0</version>
     <modules>
         <module>Generic</module>
+        <module>BestBuy</module>
+        <module>Facebook</module>
         <module>Demo</module>
         <module>Amazon</module>
         <module>Cnn</module>
-        <module>Horizon</module>
-        <module>MetLife</module>
         <module>W3Schools</module>
         <module>RestApi</module>
     </modules>
