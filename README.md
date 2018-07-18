@@ -47,4 +47,4 @@
     - [https://developers.google.com/sheets/api/quickstart/java](https://developers.google.com/sheets/api/quickstart/java)
     
     
-   ## ALL thanks to Mr. Mafi(Course Instructor) & PNT
+   ## ALL thanks to Mr. Mafi & PNT
